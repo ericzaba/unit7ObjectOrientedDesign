@@ -49,7 +49,7 @@ public class Question
 
     public void addText( String questionText)
     {
-        text += question;
+
     }
 
   
