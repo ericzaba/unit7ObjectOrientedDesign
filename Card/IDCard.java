@@ -27,7 +27,7 @@ public class IDCard extends Card
             boolean isEqual = super.equals( other );
             
             //check if the instance variables of this object and the other object are equal
-            return isEqual&& this.idNumber.equals(other.idNumber);
+            return isEqual&& this.idNumber.equals(idNumber);
     
         }
     }
