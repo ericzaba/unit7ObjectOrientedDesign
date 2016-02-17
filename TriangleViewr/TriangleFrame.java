@@ -14,12 +14,12 @@ import javax.swing.JLabel;
 
 public class TriangleFrame 
 {
-    private static final int FRAME_WIDTH = 100;
-    private static final int FRAME_HEIGHT = 100;
+    private static final int FRAME_WIDTH = 200;
+    private static final int FRAME_HEIGHT = 200;
     private JPanel panel;
     private JFrame frame;
     private Graphics2D g;
-    private Rectangle box;
+
     public TriangleFrame()
     {
         this.frame = new JFrame();
@@ -36,30 +36,16 @@ public class TriangleFrame
 
         public void actionPerformed(ActionEvent event)
         {
-            System.out.println("button" + event.getActionCommand() + "was clicked");
+            
         }
-
-    }
-    Graphics2D g2 = (Graphics2D)g;
-
-    public void paintComponent(Graphics g)
-    {
-        Graphics2D g2 = (Graphics2D) g;
-        g2.draw(box);
-        g2.drawLine(10, 10, 5, 5);
 
     }
     
-    public class TriangleViewer
-    {
-        public static void main(String[] args)
-        {
-            JFrame frame = new RectangleFrame();
-            
-            frame.setVisible(true);
-        }
 
-    }
+ 
+    
+
+    
 }
 
 
