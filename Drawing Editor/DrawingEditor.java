@@ -23,18 +23,19 @@ public class DrawingEditor extends JFrame
         this.setTitle("Drawing Editor");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        JFrame frame = new JFrame();
+
         ControlPanel control = new ControlPanel();
-        frame.add(control);
+        control.setSize(100, 100);
+        this.add(control);
         
-        
+        control.setVisible(true);
         this.setVisible(true);
     }
     
     public static void main(String[] args)
     {   
         DrawingEditor drawingeditor = new DrawingEditor();
-
+       
         
     }
 }
