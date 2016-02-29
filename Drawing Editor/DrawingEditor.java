@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JFrame;
 import java.awt.*;
 import javax.swing.*;
+import java.util.ArrayList;
 public class DrawingEditor extends JFrame
 {
     
