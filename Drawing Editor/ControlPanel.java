@@ -20,6 +20,8 @@ public class ControlPanel extends JPanel
     private JButton addSquare;
     private JLabel colorLabel;
     private JLabel circleLabel;
+    
+    
     public ControlPanel()
     {
 
@@ -31,8 +33,7 @@ public class ControlPanel extends JPanel
         this.colorLabel = new JLabel("Pick Color");
         this.add(colorLabel);
         
-        ClickListener listener = new ClickListener();
-        this.color.addActionListener(listener);
+        
         
         this.addCircle = new JButton();
         this.addCircle.setPreferredSize(new Dimension(40, 40));
@@ -42,15 +43,6 @@ public class ControlPanel extends JPanel
         
         
     }
-    public class ClickListener implements ActionListener
-    {
-        private String name;
-
-        public void actionPerformed(ActionEvent event)
-        {
-            
-        }
-
-    }
+    
 
 }

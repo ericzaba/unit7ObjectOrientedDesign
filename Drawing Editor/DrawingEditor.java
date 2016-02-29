@@ -20,20 +20,20 @@ public class DrawingEditor extends JFrame
         this.setTitle("Drawing Editor");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        ControlPanel control = new ControlPanel();
-        control.setSize(200, 200);
+        ControlPanel controls = new ControlPanel();
+        controls.setSize(100, 200);
         
-        DrawingPanel drawing = new DrawingPanel();
-        drawing.setSize(10, 10);
+        DrawingPanel canvas = new DrawingPanel();
+        canvas.setSize(10, 10);
         
-        this.add(control, BorderLayout.PAGE_END);
+        this.add(controls, BorderLayout.PAGE_END);
 
-        this.add(drawing);
+        this.add(canvas, BorderLayout.CENTER);
 
         
         
-        drawing.setVisible(true);
-        control.setVisible(true);
+        canvas.setVisible(true);
+        controls.setVisible(true);
         this.setVisible(true);
     }
     
