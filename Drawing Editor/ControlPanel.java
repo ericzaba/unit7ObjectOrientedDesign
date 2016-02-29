@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Dimension;
+import javax.swing.*;
+import java.awt.*;
 public class ControlPanel extends JPanel
 {
 
@@ -34,9 +36,9 @@ public class ControlPanel extends JPanel
         
         this.addCircle = new JButton();
         this.addCircle.setPreferredSize(new Dimension(40, 40));
-        this.add(addCircle);
+        this.add(addCircle, BorderLayout.PAGE_END);
         this.circleLabel = new JLabel("Add Circle");
-        this.add(circleLabel);
+        this.add(circleLabel, BorderLayout.PAGE_END);
         
         
     }

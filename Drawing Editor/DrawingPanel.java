@@ -3,16 +3,17 @@ import java.awt.Dimension;
 import javax.swing.JColorChooser;
 import javax.swing.JPanel;
 import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 public class DrawingPanel extends JPanel
 {
 
     Color pickedColor = new Color(0,0,0);
     public DrawingPanel()
     {
-        
+
 
     }
-
     public Color getColor()
     {
         return null;
@@ -38,7 +39,7 @@ public class DrawingPanel extends JPanel
 
     public void paintComponent(Graphics g)
     {
-       
+        Graphics2D g2d = (Graphics2D) g;
     }
 
 }
