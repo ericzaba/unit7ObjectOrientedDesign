@@ -7,7 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 public class DrawingPanel extends JPanel
 {
-
+    
+    
     Color pickedColor = new Color(0,0,0);
     public DrawingPanel()
     {
