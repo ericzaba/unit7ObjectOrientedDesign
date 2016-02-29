@@ -29,8 +29,8 @@ public class DrawingEditor extends JFrame
         this.add(control);
         DrawingPanel drawing = new DrawingPanel();
         drawing.setSize(10, 10);
-        this.add(drawing);
-        drawing.setVisible(true);
+
+
         control.setVisible(true);
         this.setVisible(true);
     }

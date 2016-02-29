@@ -13,23 +13,32 @@ public class ControlPanel extends JPanel
 {
 
     private JPanel panel;
-    private JButton button;
-    private JLabel label;
-
+    private JButton color;
+    private JButton addCircle;
+    private JButton addSquare;
+    private JLabel colorLabel;
+    private JLabel circleLabel;
     public ControlPanel()
     {
 
         this.panel = new JPanel();
 
-        this.button = new JButton();
-        this.button.setPreferredSize(new Dimension(40, 40));
-        this.add(button);
-        this.label = new JLabel("Pick Color");
-        this.add(label);
-
+        this.color = new JButton();
+        this.color.setPreferredSize(new Dimension(40, 40));
+        this.add(color);
+        this.colorLabel = new JLabel("Pick Color");
+        this.add(colorLabel);
+        
         ClickListener listener = new ClickListener();
-        this.button.addActionListener(listener);
-
+        this.color.addActionListener(listener);
+        
+        this.addCircle = new JButton();
+        this.addCircle.setPreferredSize(new Dimension(40, 40));
+        this.add(addCircle);
+        this.circleLabel = new JLabel("Add Circle");
+        this.add(circleLabel);
+        
+        
     }
     public class ClickListener implements ActionListener
     {
