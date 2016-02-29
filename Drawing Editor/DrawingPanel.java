@@ -20,7 +20,7 @@ public class DrawingPanel extends JPanel
         this.circles = new ArrayList<Circle>();
         this.squares = new ArrayList<Square>();
         
-
+        
     }
     public Color getColor()
     {
