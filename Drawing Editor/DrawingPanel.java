@@ -62,18 +62,9 @@ public class DrawingPanel extends JPanel
         }
         
         super.paintComponent(g);
-        
-        
-
         g.drawString("test", 100, 100);
 
     }
     
     
-    
-    
-    
-    
-    
-
 }
