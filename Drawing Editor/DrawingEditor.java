@@ -11,26 +11,24 @@ import javax.swing.JFrame;
 public class DrawingEditor extends JFrame
 {
 
-    private static final int FRAME_WIDTH = 400;
-    private static final int FRAME_HEIGHT = 400;
-    private JFrame frame;
+ 
+
+
     
     public DrawingEditor()
     {
         
-        
-        this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        this.setSize(1000, 1000);
         this.setTitle("Drawing Editor");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-
         ControlPanel control = new ControlPanel();
-        control.setSize(100, 100);
+        control.setSize(200, 200);
         this.add(control);
         DrawingPanel drawing = new DrawingPanel();
-        drawing.setSize(10, 10);
+        drawing.setSize(0, 0);
 
-
+        
         control.setVisible(true);
         this.setVisible(true);
     }

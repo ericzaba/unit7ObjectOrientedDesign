@@ -9,6 +9,7 @@ public class DrawingPanel extends JPanel
     Color pickedColor = new Color(0,0,0);
     public DrawingPanel()
     {
+        
 
     }
 
@@ -37,8 +38,7 @@ public class DrawingPanel extends JPanel
 
     public void paintComponent(Graphics g)
     {
-        super.paintComponent(g);
-        setBackground(Color.WHITE);
+       
     }
 
 }
