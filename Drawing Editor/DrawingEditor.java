@@ -27,7 +27,10 @@ public class DrawingEditor extends JFrame
         ControlPanel control = new ControlPanel();
         control.setSize(100, 100);
         this.add(control);
-        
+        DrawingPanel drawing = new DrawingPanel();
+        drawing.setSize(10, 10);
+        this.add(drawing);
+        drawing.setVisible(true);
         control.setVisible(true);
         this.setVisible(true);
     }
@@ -35,7 +38,5 @@ public class DrawingEditor extends JFrame
     public static void main(String[] args)
     {   
         DrawingEditor drawingeditor = new DrawingEditor();
-       
-        
     }
 }

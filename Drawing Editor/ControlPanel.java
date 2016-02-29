@@ -15,19 +15,18 @@ public class ControlPanel extends JPanel
     private JPanel panel;
     private JButton button;
     private JLabel label;
-    
+
     public ControlPanel()
     {
 
         this.panel = new JPanel();
 
-        
         this.button = new JButton();
         this.button.setPreferredSize(new Dimension(40, 40));
         this.add(button);
-        this.label = new JLabel("Sample Text");
+        this.label = new JLabel("Pick Color");
         this.add(label);
-        
+
         ClickListener listener = new ClickListener();
         this.button.addActionListener(listener);
 
@@ -38,7 +37,7 @@ public class ControlPanel extends JPanel
 
         public void actionPerformed(ActionEvent event)
         {
-            System.out.println("button" + event.getActionCommand() + "was clicked");
+            
         }
 
     }

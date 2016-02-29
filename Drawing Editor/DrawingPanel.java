@@ -5,8 +5,11 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 public class DrawingPanel extends JPanel
 {
+
+    Color pickedColor = new Color(0,0,0);
     public DrawingPanel()
     {
+
     }
 
     public Color getColor()
@@ -21,6 +24,7 @@ public class DrawingPanel extends JPanel
 
     public void pickColor()
     {
+
     }
 
     public void addCircle()
@@ -33,6 +37,8 @@ public class DrawingPanel extends JPanel
 
     public void paintComponent(Graphics g)
     {
+        super.paintComponent(g);
+        setBackground(Color.WHITE);
     }
 
 }
