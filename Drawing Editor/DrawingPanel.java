@@ -8,18 +8,21 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
+import java.awt.geom.Point2D;
 public class DrawingPanel extends JPanel
 {
 
     ArrayList<Circle> circles;
     ArrayList<Square> squares;
-
+    Point2D.Double randomRadius;
     Color pickedColor = new Color(0,0,0);
+    Random random = new Random();
     public DrawingPanel()
     {
         this.circles = new ArrayList<Circle>();
         this.squares = new ArrayList<Square>();
-        
+        this.setBackground(Color.WHITE);
         
     }
     public Color getColor()
@@ -52,17 +55,17 @@ public class DrawingPanel extends JPanel
         Graphics2D g2d = (Graphics2D) g;
         for (int i=0; i<circles.size(); i++)
         {
-        
+            circles.get(i).draw();
         }
         
         
         for (int i = 0; i< squares.size(); i++)
         {
-            
+            squares.get(i).draw();
         }
         
         super.paintComponent(g);
-        g.drawString("test", 100, 100);
+        g.drawLine(10, 10, 100, 100);
 
     }
     
