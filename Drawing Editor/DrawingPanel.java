@@ -41,7 +41,7 @@ public class DrawingPanel extends JPanel
     }
     public void addCircle()
     {
-        randomRadius = random.nextDouble()*250;
+        randomRadius = random.nextDouble()*250.0;
         this.circles.add(new Circle(radius, 10, Color.BLACK));
     }
 
