@@ -29,8 +29,6 @@ public class DrawingEditor extends JFrame
         this.add(controls, BorderLayout.PAGE_END);
 
         this.add(canvas, BorderLayout.CENTER);
-
-        
         
         canvas.setVisible(true);
         controls.setVisible(true);

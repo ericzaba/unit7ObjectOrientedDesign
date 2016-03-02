@@ -8,8 +8,15 @@ public abstract class Shape
 {   
     
     private double radius;
-    
-    
+    private boolean filled;
+    private Color color;
+    private Point2D.Double center;
+    public Shape(Point2D.Double center,
+    double radius, Color color)
+    {
+        this.radius = radius;
+        
+    }
     double getRadius()
     {
         this.radius = 1;
@@ -18,6 +25,7 @@ public abstract class Shape
 
     void move(double x, double y)
     {
+        this.center = new Point2D.Double(x,y);
     }
 
     void setRadius(double r)

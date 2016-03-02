@@ -41,12 +41,13 @@ public class DrawingPanel extends JPanel
     }
     public void addCircle()
     {
-        this.circles.add(new Circle());
+        randomRadius = random.nextDouble()*250;
+        this.circles.add(new Circle(radius, 10, Color.BLACK));
     }
 
     public void addSquare()
     {
-        this.squares.add(new Square());
+        this.squares.add(new Square(randomRadius, 10, Color.BLACK));
     }
 
     public void paintComponent(Graphics g)
@@ -55,13 +56,13 @@ public class DrawingPanel extends JPanel
         Graphics2D g2d = (Graphics2D) g;
         for (int i=0; i<circles.size(); i++)
         {
-            circles.get(i).draw();
+            circles.get(i).draw(randomRadius, 10, Color.BLACK);
         }
         
         
         for (int i = 0; i< squares.size(); i++)
         {
-            squares.get(i).draw();
+            squares.get(i).draw(randomRadius, 10, Color.BLACK);
         }
         
         super.paintComponent(g);
