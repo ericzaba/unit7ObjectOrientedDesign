@@ -48,15 +48,5 @@ public class ControlPanel extends JPanel
         this.add(squareLabel, BorderLayout.PAGE_END);
     }
     
-    public class ClickListener implements ActionListener
-    {
-        private String name;
-
-        public void actionPerformed(ActionEvent event)
-        {
-            
-            
-        }
-
-    }
+    
 }

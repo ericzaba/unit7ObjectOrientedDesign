@@ -15,11 +15,19 @@ public abstract class Shape
     double radius, Color color)
     {
         this.radius = radius;
-        
+        this.center = center;
+        this.color = color;
     }
+    Point2D.Double getCenter()
+    {
+        
+        return this.center;
+    }
+    
+    
+    
     double getRadius()
     {
-        this.radius = 1;
         return radius;
     }
 
@@ -34,15 +42,11 @@ public abstract class Shape
         
     }
 
-    boolean isInside(Point2D.Double point)
-    {
-        return true;
-    }
+    abstract boolean isInside(Point2D.Double point);
+    
 
-    void draw(Graphics2D g2, boolean filled)                
-    {
-        
-    }
+    abstract void draw(Graphics2D g2, boolean filled);             
+    
     
 
 }

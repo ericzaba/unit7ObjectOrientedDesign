@@ -13,15 +13,14 @@ import java.awt.geom.Point2D;
 public class DrawingPanel extends JPanel
 {
 
-    ArrayList<Circle> circles;
-    ArrayList<Square> squares;
+    ArrayList<Shape> shapes;
     Point2D.Double randomRadius;
     Color pickedColor = new Color(0,0,0);
     Random random = new Random();
     public DrawingPanel()
     {
-        this.circles = new ArrayList<Circle>();
-        this.squares = new ArrayList<Square>();
+        this.shapes = new ArrayList<Shape>();
+        
         this.setBackground(Color.WHITE);
         
     }
@@ -41,34 +40,39 @@ public class DrawingPanel extends JPanel
     }
     public void addCircle()
     {
-        randomRadius = random.nextDouble()*250.0;
-        this.circles.add(new Circle(radius, 10, Color.BLACK));
+        
+        this.shapes.add(new Circle(new Point2D.Double(10,10), 60, Color.BLACK));
     }
 
     public void addSquare()
     {
-        this.squares.add(new Square(randomRadius, 10, Color.BLACK));
+        this.shapes.add(new Square(randomRadius, 10, Color.BLACK));
     }
 
     public void paintComponent(Graphics g)
     {
         
         Graphics2D g2d = (Graphics2D) g;
-        for (int i=0; i<circles.size(); i++)
+        for (int i=0; i<shapes.size(); i++)
         {
-            circles.get(i).draw(randomRadius, 10, Color.BLACK);
-        }
-        
-        
-        for (int i = 0; i< squares.size(); i++)
-        {
-            squares.get(i).draw(randomRadius, 10, Color.BLACK);
+            this.shapes.get(i).draw(g2d, true);
+            
         }
         
         super.paintComponent(g);
         g.drawLine(10, 10, 100, 100);
 
     }
-    
+    public class ClickListener implements ActionListener
+    {
+        private String name;
+
+        public void actionPerformed(ActionEvent event)
+        {
+            
+            
+        }
+
+    }
     
 }
