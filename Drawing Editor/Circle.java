@@ -20,6 +20,6 @@ public class Circle extends Shape
     
     public void draw(Graphics2D g)
     {
-        g.draw(Ellipse2D(center), radius, radius);
+        g.draw(new Ellipse2D(center), radius, radius);
     }
 }

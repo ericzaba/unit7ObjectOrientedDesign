@@ -11,7 +11,7 @@ public class Square extends Shape
     }
     public void draw(Graphics2D g, boolean filled)
     {   
-        g.draw(
+
        
         
     }
