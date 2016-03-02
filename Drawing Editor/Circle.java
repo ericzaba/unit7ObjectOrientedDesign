@@ -6,21 +6,19 @@ import java.awt.geom.*;
 public class Circle extends Shape
 { 
 
-    private Point2D.Double center;
-    private Color color;
-    private double radius;
+   
 
     public Circle (Point2D.Double center,
     double radius, Color color)
     {
         super(center, radius, color);
 
-        this.color = Color.BLACK; 
+         
     }
 
     public void draw(Graphics2D g, boolean filled)
     {
-        g.draw(new Ellipse2D.Double(this.getCenter().getX(), this.getCenter().getY(), radius, radius));
+        g.draw(new Ellipse2D.Double(this.getCenter().getX(), this.getCenter().getY(), this.getRadius(), this.getRadius()));
     }
 
     public boolean isInside(Point2D.Double point)

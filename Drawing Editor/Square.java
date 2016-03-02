@@ -11,6 +11,18 @@ public class Square extends Shape
     }
     public void draw(Graphics2D g, boolean filled)
     {   
-
+        if (filled == true)
+        {
+            g.fillRect((int)this.getX(), (int)this.getY(), (int)this.getRadius(), (int)this.getRadius());
+        }
+        if (filled == false)
+        {
+            g.drawRect((int)this.getX(), (int)this.getY(), (int)this.getRadius(), (int)this.getRadius());
+        }
+        
+    }
+    public boolean isInside(Point2D.Double point)
+    {
+        return true;
     }
 }

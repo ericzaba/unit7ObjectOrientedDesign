@@ -46,7 +46,8 @@ public class DrawingPanel extends JPanel
 
     public void addSquare()
     {
-        this.shapes.add(new Square(randomRadius, 10, Color.BLACK));
+        
+        this.shapes.add(new Square(new Point2D.Double(random.nextInt(1000), random.nextInt(1000)), 10, Color.BLACK));
     }
 
     public void paintComponent(Graphics g)
@@ -55,6 +56,7 @@ public class DrawingPanel extends JPanel
         Graphics2D g2d = (Graphics2D) g;
         for (int i=0; i<shapes.size(); i++)
         {
+            g.setColor(Color.GREEN);
             this.shapes.get(i).draw(g2d, true);
             
         }
@@ -63,16 +65,6 @@ public class DrawingPanel extends JPanel
         g.drawLine(10, 10, 100, 100);
 
     }
-    public class ClickListener implements ActionListener
-    {
-        private String name;
-
-        public void actionPerformed(ActionEvent event)
-        {
-            
-            
-        }
-
-    }
+    
     
 }

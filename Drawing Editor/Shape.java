@@ -21,10 +21,16 @@ public abstract class Shape
     Point2D.Double getCenter()
     {
         
-        return this.center;
+        return center;
     }
-    
-    
+    double getX()
+    {
+        return this.center.getX();
+    }
+    double getY()
+    {
+        return this.center.getY();
+    }
     
     double getRadius()
     {

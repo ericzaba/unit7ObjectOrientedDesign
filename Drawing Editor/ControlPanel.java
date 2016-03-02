@@ -21,7 +21,7 @@ public class ControlPanel extends JPanel
     private JLabel colorLabel;
     private JLabel circleLabel;
     private JLabel squareLabel;
-    
+
     public ControlPanel()
     {
 
@@ -32,21 +32,33 @@ public class ControlPanel extends JPanel
         this.add(color);
         this.colorLabel = new JLabel("Pick Color");
         this.add(colorLabel);
-        
-        
+
         
         this.addCircle = new JButton();
         this.addCircle.setPreferredSize(new Dimension(40, 40));
         this.add(addCircle, BorderLayout.PAGE_END);
         this.circleLabel = new JLabel("Add Circle");
         this.add(circleLabel, BorderLayout.PAGE_END);
-        
+
         this.addSquare = new JButton();
         this.addSquare.setPreferredSize(new Dimension(40, 40));
         this.add(addSquare, BorderLayout.PAGE_END);
+
         this.squareLabel = new JLabel("Add Square");
         this.add(squareLabel, BorderLayout.PAGE_END);
     }
-    
-    
+    public class ClickListener implements ActionListener
+    {
+        public ClickListener()
+        {
+            addCircle.addActionListener(this);
+            addSquare.addActionListener(this);
+
+        }
+
+        public void actionPerformed(ActionEvent event)
+        {
+
+        }
+    }
 }
