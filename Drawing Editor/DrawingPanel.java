@@ -15,7 +15,7 @@ public class DrawingPanel extends JPanel
 
     ArrayList<Shape> shapes;
     Point2D.Double randomRadius;
-    Color pickedColor = new Color(0,0,0);
+    Color pickedColor;
     Random random = new Random();
     public DrawingPanel()
     {
