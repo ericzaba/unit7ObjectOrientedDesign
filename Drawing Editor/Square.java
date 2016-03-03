@@ -11,8 +11,10 @@ public class Square extends Shape
     }
     public void draw(Graphics2D g, boolean filled)
     {   
-        if (filled == true)
+        g.fillRect(100, 100, 10, 10);
+         if (filled == true)
         {
+            
             g.fillRect((int)this.getX(), (int)this.getY(), (int)this.getRadius(), (int)this.getRadius());
         }
         if (filled == false)
