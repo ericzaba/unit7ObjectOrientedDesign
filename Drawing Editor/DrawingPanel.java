@@ -42,17 +42,26 @@ public class DrawingPanel extends JPanel
 
     }
 
+    /**
+     * Method addCircle
+     * adds a new circle object with shape inheritance to the list of shapes
+     */
     public void addCircle()
     {
 
         this.shapes.add(new Circle(new Point2D.Double(random.nextInt(1000), random.nextInt(1000)), random.nextInt(300), Color.BLACK));
     }
 
+    /**
+     * Method addSquare
+     * adds a new square object with shape inheritance to the list of shapes
+     */
     public void addSquare()
     {
 
         this.shapes.add(new Square(new Point2D.Double(random.nextInt(1000), random.nextInt(1000)), random.nextInt(300), Color.BLACK));
     }
+
     public boolean randomBoolean()
     {
         int booleanChoice = random.nextInt(1);
@@ -63,11 +72,15 @@ public class DrawingPanel extends JPanel
         }
         return this.pickedFill;
     }
-    
+
+    /**
+     * Method randomColor
+     *  method by me to create a random color 
+     */
     public void randomColor()
     {
         int colorChoice = this.random.nextInt(10);
-        
+
         switch (colorChoice)
         {
             case 0: this.pickedColor = Color.BLACK;
@@ -83,15 +96,16 @@ public class DrawingPanel extends JPanel
             case 10: this.pickedColor = Color.darkGray;
         }
     }
+
+    /**
+     * Method paintComponent
+     *
+     * @param g a graphics object that is not passed in by the user
+     * 
+     */
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
-        this.addCircle();
-        
-        this.addSquare();
-        this.addSquare();
-        this.addSquare();
-        this.addSquare();
         Graphics2D g2d = (Graphics2D) g;
         for (int i=0; i<shapes.size(); i++)
         {
@@ -100,9 +114,6 @@ public class DrawingPanel extends JPanel
 
         }
 
-        
         g.drawLine(10, 10, 100, 100);
-
     }
-
 }
